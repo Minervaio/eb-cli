@@ -3,11 +3,10 @@ FROM alpine:3.8
         git \
         less \
         openssh-client \
-        py-pip \
-        python \
+        python3 \
         && \
-    pip install --upgrade pip && \
-    pip install --upgrade awsebcli && \
+    pip3 install --upgrade pip && \
+    pip3 install --upgrade setuptools awsebcli && \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
 
